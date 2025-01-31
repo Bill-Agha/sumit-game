@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiC Summit Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>TiC Summit Simulator</h1>
+        <p>Goal: Reach 1000 registrations in 7 days!</p>
+        
+        <!-- Campaign Controls -->
+        <div class="campaigns">
+            <div class="campaign">
+                <h3>Social Media Campaign</h3>
+                <button onclick="runCampaign('social')">Run Social Media Campaign ($150)</button>
+                <p>Sharing Rate: +5%, Conversion: +0.5%</p>
+            </div>
+            <div class="campaign">
+                <h3>School Partnerships</h3>
+                <button onclick="runCampaign('school')">Run School Partnerships ($300)</button>
+                <p>Reach: +1000, Conversion: +1%</p>
+            </div>
+            <div class="campaign">
+                <h3>Traditional Media Engagement</h3>
+                <button onclick="runCampaign('media')">Run Traditional Media Engagement ($250)</button>
+                <p>Reach: +500, Conversion: +1.5%</p>
+            </div>
+            <div class="campaign">
+                <h3>Community Outreach</h3>
+                <button onclick="runCampaign('community')">Run Community Outreach ($200)</button>
+                <p>Reach: +750, Sharing Rate: +3%</p>
+            </div>
+            <div class="campaign">
+                <h3>Hackathons</h3>
+                <button onclick="runCampaign('hackathon')">Run Hackathons ($400)</button>
+                <p>Reach: +1500, Conversion: +2%, Sharing Rate: +7%</p>
+            </div>
+        </div>
+
+        <!-- Game Stats -->
+        <div class="stats">
+            <p><strong>Day:</strong> <span id="day">1</span>/7</p>
+            <p><strong>Registrations:</strong> <span id="registrations">0</span></p>
+            <p><strong>Budget:</strong> $<span id="budget">1000</span></p>
+        </div>
+
+        <!-- Graph -->
+        <canvas id="registrationsChart"></canvas>
+    </div>
+
+    <!-- Notification Section -->
+    <div class="notification-section">
+        <h2>Notifications</h2>
+        <div id="notifications"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
